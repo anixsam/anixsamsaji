@@ -16,6 +16,11 @@
   background-color: #0563bb;
 }
 
+#themeIcon
+{
+  color: white;
+}
+
 /*Dark Theme*/
 
 .dark-theme
@@ -28,6 +33,7 @@
   --nav-bg : rgb(36, 36, 36);
   --hero-bg : rgba(0, 0, 0, 0.9);
   --portfolio-item-bg : rgb(7, 7, 7,0.3);
+
 }
 
 :root
