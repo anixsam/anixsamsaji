@@ -335,7 +335,7 @@
                 <a href="https://drive.google.com/file/d/1QDYYAAePZEwJB_8eS7UAcPRSBC-7INAq/view?usp=sharing"
                   title="More Details"><i class="bx bx-link"></i></a>
               </div>
-              <h3>Bike Anti Theft System</h3>
+              <h3 class="heading3">Bike Anti Theft System</h3>
             </div>
           </div>
 
@@ -346,7 +346,7 @@
                 <a href="https://www.qwiklabs.com/public_profiles/c689a450-264a-495a-a852-9dab50d18856"
                   title="More Details" target="_blank"><i class="bx bx-link"></i></a>
               </div>
-              <h3>Google Cloud Readiness Program</h3>
+              <h3 class="heading3">Google Cloud Readiness Program</h3>
             </div>
           </div>
 
@@ -506,7 +506,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form role="form" class="php-email-form" id="submit-form">
+            <form action="" role="form" class="php-email-form" id="submit-form" name="submit-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input  type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -523,8 +523,8 @@
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="error-message" id="error">Some error occured</div>
+                <div class="sent-message"  id="successful">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
@@ -589,6 +589,7 @@
       console.log("light");
       document.getElementById("themeIcon").className="bi bi-moon";
 		}
+
 		toggle.onclick=function()
 		{
 			document.body.classList.toggle("dark-theme");
@@ -603,26 +604,31 @@
         document.getElementById("themeIcon").className="bi bi-moon";
 			}
 		}
+
   </script>
   <!-- Script end -->
 
   <script>
-    $("#submit-form").submit((e)=>{
-        e.preventDefault()
-        $.ajax({
-            url:"https://script.google.com/a/nirmalacollege.ac.in/macros/s/AKfycbzGLAv51UMDchl29KjBqPiQxT7QTxwdPqgnzFel/exec",
-            data:$("#submit-form").serialize(),
-            method:"post",
-            success:function (response){
-                alert("Thanks for contacting Me🧑‍💻")
-                window.location.reload()
-                //window.location.href="https://google.com"
-            },
-            error:function (err){
-                alert("Something Error")
-            }
-        })
-    })
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyA-BJ4aHfK84y265q4vzlooAVjbbDInZZtVmGOfl_vJCtKEXmN/exec'
+  const form = document.forms['submit-form']
+  const successful = document.getElementById("successful")
+  const error = document.getElementById("error")
+  const submitForm = document.getElementById("submit-form")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        successful.style.display = "block"
+        setTimeout(function(){
+          successful.style.display = "none"
+        },5000)
+        submitForm.reset();
+      })
+      .catch(error => {
+        error.style.display = "block"
+        submitForm.reset();
+      })
+  })
 </script>
 
   <!-- Template Main JS File -->
