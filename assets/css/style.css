@@ -592,6 +592,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  justify-content: center;
 }
 
 .portfolio .portfolio-wrap::before {

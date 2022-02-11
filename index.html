@@ -431,7 +431,7 @@
                 <i class="bx bx-image-alt"></i>
               </div>
               <h4><a href="">Designing</a></h4>
-              <p>Accepts various designing works,such as logo designing, UI designing,Cover page designing</p>
+              <p>Designs Logos, Cover Images, User Interfaces, Posters</p>
             </div>
           </div>
 
@@ -446,7 +446,7 @@
                 <i class="bx bx-mobile"></i>
               </div>
               <h4><a href="">App Development</a></h4>
-              <p>Accepts simple app development projects.Apps are built using Flutter</p>
+              <p>Works on Mobile App development projects.Apps are built using Flutter</p>
             </div>
           </div>
 
@@ -461,7 +461,7 @@
                 <i class="bx bx-chip"></i>
               </div>
               <h4><a href="">IoT Projects</a></h4>
-              <p>Accepts IoT projects for B.Tech Projects. Uses Arduino, Raspberry Pi, NodeMCU, for implementing the projects</p>
+              <p>Does IoT projects for B.Tech Projects. Uses Arduino, Raspberry Pi, NodeMCU, for implementing the projects</p>
             </div>
           </div>
 
@@ -620,15 +620,38 @@
       .then(response => {
         successful.style.display = "block"
         setTimeout(function(){
-          successful.style.display = "none"
-        },5000)
+          fade(successful,300)
+        },2500)
         submitForm.reset();
+        setTimeout(function(){
+          successful.style.display = "none"
+        },2800)
       })
       .catch(error => {
         error.style.display = "block"
         submitForm.reset();
+        setTimeout(function(){
+          fade(error,300)
+        },2500)
+        setTimeout(function(){
+          error.style.display = "none"
+        },2800)
       })
+      
   })
+  
+  function fade(element, duration) {
+    var start = new Date;
+    (function next() {
+        var time = new Date - start;
+        if(time < duration) {
+            element.style.opacity = 1 - time / duration;
+            requestAnimationFrame(next);
+        } else {
+            element.style.opacity = '0';
+        }
+      })();
+}
 </script>
 
   <!-- Template Main JS File -->
