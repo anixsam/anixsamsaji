@@ -38,7 +38,6 @@
 </head>
 
 <body>
-
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -53,14 +52,13 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        
-        <button id="toggle" onclick="toggleDark()">Helllo</button>
       </ul>
       
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
-
+  <!-- <button id="toggle" class="back-to-top d-flex justify-content-center align-items-center"><i id="darkIcon" class="bi bi-sun" ></i></button> -->
+  <!-- <button id="toggle" class="back-to-top d-flex justify-content-center align-items-center"><i id="lightIcon" class="bi bi-moon" ></i></button> -->
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -69,11 +67,9 @@
       <div class="social-links">
         <a href="https://twitter.com/anix_sam" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
         <a href="https://facebook.com/anix.sam" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-        <a href="https://instagram.com/anix_sam_official" class="instagram" target="_blank"><i
-            class="bx bxl-instagram"></i></a>
+        <a href="https://instagram.com/anix_sam_official" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
         <a href="https://www.github.com/anixsam" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-        <a href="https://linkedin.com/in/anixsamsaji" class="linkedin" target="_blank"><i
-            class="bx bxl-linkedin"></i></a>
+        <a href="https://linkedin.com/in/anixsamsaji" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -564,11 +560,11 @@
       <h3>Anix Sam Saji</h3>
       <p>Aspiring Web/App Developer, currently pursuing B.Tech in Computer Science Engineering</p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://twitter.com/anix_sam" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+        <a href="https://facebook.com/anix.sam" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+        <a href="https://instagram.com/anix_sam_official" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.github.com/anixsam" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://linkedin.com/in/anixsamsaji" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>Anix Sam Saji - Portfolio</span></strong>. All Rights Reserved
@@ -601,12 +597,14 @@
   <script>
     var toggle = document.getElementById("toggle");
 		var theme = localStorage.getItem("theme");
-		if(theme == "light")
+		if(theme == "dark")
 		{
 			document.body.classList.toggle("dark-theme");
+      console.log("dark");
 		}
 		else
 		{
+      console.log("light");
 		}
 		toggle.onclick=function()
 		{
