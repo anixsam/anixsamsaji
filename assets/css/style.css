@@ -1,6 +1,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/*Theme Button Style*/
+
 #toggle
 {
   position: fixed;
@@ -13,6 +15,8 @@
   height: 50px;
   background-color: #0563bb;
 }
+
+/*Dark Theme*/
 
 .dark-theme
 {
