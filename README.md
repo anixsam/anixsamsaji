@@ -10,7 +10,7 @@ My Portfolio Website
 
 ### Mobile View
 
-![shot2.png](https://github.com/anixsam/portfolio/blob/main/screenshots/shot2.png)
+![shot2.png](https://github.com/anixsam/portfolio/blob/main/screenshots/shot2.jpg)
 
 # Author
 
