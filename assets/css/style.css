@@ -814,6 +814,21 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
+.form-control
+{
+  background-color: var(--nav-bg);
+  color: var(--font-color);
+  border:none;
+}
+
+.form-control:focus
+{
+  background-color: var(--nav-bg);
+  caret-color: var(--font-color);
+  color: white;
+}
+
 .contact .info {
   width: 100%;
   background: var(--primary-color);
