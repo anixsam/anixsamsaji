@@ -6,11 +6,11 @@ My Portfolio Website
 
 ### Desktop View
 
-![shot1.png](https://github.com/anixsam/portfolio/screenshots/shot1.png)
+![shot1.png](hhttps://github.com/anixsam/portfolio/blob/main/screenshots/shot1.png)
 
 ### Mobile View
 
-![shot2.png](https://github.com/anixsam/portfolio/screenshots/shot2.png)
+![shot2.png](https://github.com/anixsam/portfolio/blob/main/screenshots/shot2.png)
 
 # Author
 
