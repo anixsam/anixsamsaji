@@ -6,7 +6,7 @@ My Portfolio Website
 
 ### Desktop View
 
-![shot1.png](hhttps://github.com/anixsam/portfolio/blob/main/screenshots/shot1.png)
+![shot1.png](https://github.com/anixsam/portfolio/blob/main/screenshots/shot1.png)
 
 ### Mobile View
 
