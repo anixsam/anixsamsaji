@@ -423,6 +423,12 @@ section {
   margin-bottom: 0;
 }
 
+.image-fluid
+{
+  max-width: 92%;
+  height: 440px;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -820,6 +826,10 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#submitBtn
+{
+  display: none;
+}
 
 .form-control
 {
@@ -832,7 +842,7 @@ section {
 {
   background-color: var(--nav-bg);
   caret-color: var(--font-color);
-  color: white;
+  color: var(--font-color);
 }
 
 .contact .info {
