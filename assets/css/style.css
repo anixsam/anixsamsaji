@@ -830,7 +830,10 @@ section {
 {
   display: none;
 }
-
+.rc-anchor { 
+  background: wheat !important; 
+  color: rgb(0, 255, 170)!important; }
+  
 .form-control
 {
   background-color: var(--nav-bg);

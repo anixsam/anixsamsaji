@@ -6,7 +6,6 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="text/javascript">
     var verifyCallback = function(response) {
-
       console.log(response.length)
       const button = document.getElementById("submitBtn");
       if(response.length==0)
@@ -26,7 +25,7 @@
       gcaptcha = grecaptcha.render('captcha', {
         'sitekey' : '6LebdXMeAAAAAMfMHQ0z9ckaFEQUTtd2Yzgtvlku ',
         'callback' : verifyCallback,
-        'theme' : theme
+        'theme' : 'light'
       });
     };
   </script>
@@ -558,8 +557,9 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
+              <br>
               <!-- <div class="g-recaptcha" data-sitekey="6LebdXMeAAAAAMfMHQ0z9ckaFEQUTtd2Yzgtvlku" id="captcha"></div> -->
-              <div id="captcha" ></div>
+              <center><div id="captcha"></div></center>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message" id="error">Some error occured</div>
@@ -653,6 +653,7 @@
   const successful = document.getElementById("successful")
   const error = document.getElementById("error")
   const submitForm = document.getElementById("submit-form")
+  const button = document.getElementById("submitBtn");
 
   form.addEventListener('submit', e => {
     e.preventDefault()
@@ -660,6 +661,8 @@
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         successful.style.display = "block"
+        grecaptcha.reset(gcaptcha);
+        button.style.display = "none"
         setTimeout(function(){
           fade(successful,300)
         },2500)
@@ -671,6 +674,8 @@
       .catch(error => {
         error.style.display = "block"
         submitForm.reset();
+        grecaptcha.reset(gcaptcha);
+        button.style.display = "none"
         setTimeout(function(){
           fade(error,300)
         },2500)
