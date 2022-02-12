@@ -4,6 +4,7 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3XPB3RDLV"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Important Script for Recaptcha -->
   <script type="text/javascript">
     var verifyCallback = function(response) {
       console.log(response.length)
@@ -87,7 +88,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body onload="hideButton()">
+<body>
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -557,6 +558,12 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
+              <div class="form-group mt-3">
+                <textarea type="text" id="currentTime" class="form-control" name="currentTime" style="display: none;"></textarea>
+              </div>
+              <div class="form-group mt-3">
+                <textarea type="text" id="currentDate" class="form-control" name="currentDate" style="display: none;"></textarea>
+              </div>
               <br>
               <!-- <div class="g-recaptcha" data-sitekey="6LebdXMeAAAAAMfMHQ0z9ckaFEQUTtd2Yzgtvlku" id="captcha"></div> -->
               <center><div id="captcha"></div></center>
@@ -646,7 +653,13 @@
 
   </script>
   <!-- Script end -->
-
+   <script>
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var currentDate = today.getDate() + "/" + today.getMonth()+1 + "/" + today.getFullYear();
+    document.getElementById("currentTime").textContent=time
+    document.getElementById("currentDate").textContent=currentDate
+  </script>
   <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyA-BJ4aHfK84y265q4vzlooAVjbbDInZZtVmGOfl_vJCtKEXmN/exec'
   const form = document.forms['submit-form']
@@ -657,7 +670,7 @@
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    
+    console.log(form)
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         successful.style.display = "block"
