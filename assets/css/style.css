@@ -425,8 +425,8 @@ section {
 
 .image-fluid
 {
-  max-width: 92%;
-  height: 440px;
+  max-width: 92% !important;
+  height: 440px !important;
 }
 
 /*--------------------------------------------------------------

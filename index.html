@@ -30,6 +30,7 @@
       });
     };
   </script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -87,7 +88,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="hideButton()">
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -564,7 +565,7 @@
                 <div class="error-message" id="error">Some error occured</div>
                 <div class="sent-message"  id="successful">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center" id="submitBtn" ><button type="submit" >Send Message</button></div>
+              <div class="text-center"  id="submitBtn"><button type="submit">Send Message</button></div>
             </form>
 
           </div>
