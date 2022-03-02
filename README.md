@@ -1,4 +1,4 @@
-# [Portfolio](https://anixsam.github.io/portfolio/)
+# [Portfolio](anixsamsaji.me)
 
 My Portfolio Website
 
